@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gerber-bundle-audit"
+version = "0.1.0"
+description = "Read-only manifest and basic completeness checks for Gerber/Excellon bundles"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{name = "Dilshod Makhmudov"}]
+keywords = ["gerber", "excellon", "pcb", "manufacturing", "audit"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Manufacturing",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)",
+]
+
+[project.scripts]
+gerber-bundle-audit = "gerber_bundle_audit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
